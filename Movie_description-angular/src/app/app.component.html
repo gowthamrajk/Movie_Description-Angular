@@ -1,0 +1,33 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<div class="card text-white bg-dark mb-3 container mt-5" style="max-width: 18rem;">
+  <div class="card-header">Movie Book</div>
+  <div class="card-body">
+    <p class="card-text"><input type="text" class="form-control"[(ngModel)]="name" placeholder="Enter Movie Name"></p>
+  </div>
+</div>
+
+<div [ngSwitch]="name">
+  <div *ngSwitchCase="'Gravity'">
+    <div class="card container" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <h6 class="card-subtitle mb-2">Released on 2013</h6>
+        <p class="card-text">Gravity is a 2013 science fiction thriller film directed by Affonso Cuaron, who also
+          co-wrote,co-edited, and produced the film.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="'Moon'">
+    <div class="card container" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <h6 class="card-subtitle mb-2">Released on 2009</h6>
+        <p class="card-text">
+          Moon is a science fiction film directed by Duncan Jones(in his directional debut) and written by Nathan Parker
+          from a story by Jones.fiction film</p>
+      </div>
+    </div>
+  </div>
+</div>
